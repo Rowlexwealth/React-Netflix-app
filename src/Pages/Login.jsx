@@ -7,7 +7,7 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const {user, logIn} = UserAuth();
-    const {error, setError} = useState('');
+    const [error, setError] = useState(null);
     const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
@@ -16,11 +16,12 @@ const Login = () => {
         try {
             await logIn(email, password);
             navigate('/')
-        } catch (error) {
+        } catch(error) {
             console.log(error);
-            setError(error.message)
+            setError(error)
         }
-    };
+    }; 
+   
 
   return (
     <>
@@ -36,7 +37,7 @@ const Login = () => {
                     <div className='max-w-[320px] mx-auto py-16'>
                         <h1 className='text-3xl font-bold'>Sign In</h1>
                         {/* error catch */}
-                        {error ? <p className='p-3 bg-red-400 my-2'>{error}</p> : null}
+                        {error ? <p className='p-3 bg-red-400 my-2'>{error}</p> : <></>}
                         
                         <form onSubmit={handleSubmit} className='w-full flex flex-col py-4'>
 

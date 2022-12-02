@@ -7,26 +7,26 @@ import { getFirestore } from 'firebase/firestore';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// const firebaseConfig = {
-//   apiKey: process.env.REACT_APP-FIREBASE_API_KEY,
-//   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-//   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-//   storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-//   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER,
-//   appId: process.env.REACT_APP_APP_ID
-// };
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER,
+  appId: import.meta.env.VITE_APP_ID
+};
 
 
 
 // delete later
-const firebaseConfig = {
-  apiKey: "AIzaSyBlCEnezxV8i7RyJGzhQIcZejgyxI2pOBQ",
-  authDomain: "netflix-react-8131c.firebaseapp.com",
-  projectId: "netflix-react-8131c",
-  storageBucket: "netflix-react-8131c.appspot.com",
-  messagingSenderId: "130167987553",
-  appId: "1:130167987553:web:3db35d1879919a910ff920"
-};
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBlCEnezxV8i7RyJGzhQIcZejgyxI2pOBQ",
+//   authDomain: "netflix-react-8131c.firebaseapp.com",
+//   projectId: "netflix-react-8131c",
+//   storageBucket: "netflix-react-8131c.appspot.com",
+//   messagingSenderId: "130167987553",
+//   appId: "1:130167987553:web:3db35d1879919a910ff920"
+// };
 
 // delete later
 
